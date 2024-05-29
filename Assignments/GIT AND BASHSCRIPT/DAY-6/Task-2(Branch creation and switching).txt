@@ -1,0 +1,13 @@
+Branch creation and switching create a new branch named feature and switch to it.Make changes in the feature branch and commit them
+
+Solution:
+=========
+==>git checkout -b feature
+==>echo "This is a change in the feature branch." >> example.txt
+==>git add example.txt
+==>git commit -m "Added a new line in example.txt in the feature branch"
+
+Verification:
+==============
+git log --oneline
+

@@ -1,0 +1,15 @@
+Branch creation and switching create a new branch named feature and switch to it.Make changes in the feature branch and commit them
+
+Solution:
+=========
+==>mkdir my_new_repo
+==>cd my_new_repo
+==>git init
+==>echo "This is my first file in the repository." > example.txt
+==>git add example.txt
+==>git commit -m "Initial commit with example.txt"
+
+Verification:
+=============
+==>git status
+==>git log --oneline

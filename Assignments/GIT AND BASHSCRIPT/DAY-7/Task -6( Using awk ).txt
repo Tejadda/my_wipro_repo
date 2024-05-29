@@ -1,0 +1,33 @@
+Assignment 6: Given a sample log file, write a script using grep to extract all lines containing "ERROR". Use awk to print the date, time, and error message of each extracted line.
+Data Processing with sed
+
+Solution:
+=========
+touch sample.log
+cat > sample.log
+2024-05-25 14:23:45 INFO User logged in
+2024-05-25 14:24:01 ERROR Unable to connect to database
+2024-05-25 14:25:33 WARNING Disk space low
+2024-05-25 14:26:45 ERROR Failed to load configuration file
+2024-05-25 14:27:10 INFO User logged out
+ 
+Step-2:
+========
+#!/bin/bash
+
+# Define the log file path
+logfile="sample.log"
+
+# Use grep to filter lines containing "ERROR" and then use awk to print the date, time, and error message
+grep "ERROR" "$logfile" | awk '{print $1, $2, substr($0, index($0,$4))}'
+chmod +x extract_errors.sh
+./extract_errors.sh
+ output
+==========
+2024-05-25 14:24:01 ERROR Unable to connect to database
+2024-05-25 14:26:45 ERROR Failed to load configuration file
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 6543a46138bfa679f328f4b1735b19f4897a40c2

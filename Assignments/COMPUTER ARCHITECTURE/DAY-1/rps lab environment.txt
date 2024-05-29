@@ -1,0 +1,32 @@
+
+Draw your Home Network Topology and explain how you are accessing the RPS Lab environment.
+
+Solution:
+==========
+To access the RPS Lab environment, I'm using a Virtual Private Network (VPN) connection from my home network. Here's a step-by-step explanation of how I'm accessing the lab environment:
+
+Step 1: Establishing a VPN Connection
+
+I open my VPN client software on my computer, which is connected to my home network. The VPN client software is configured to connect to the RPS Lab VPN server.
+
+Step 2: Authentication
+
+I enter my login credentials, including my username and password, to authenticate with the RPS Lab VPN server. This ensures that only authorized users can access the lab environment.
+
+Step 3: VPN Tunnel Establishment
+
+Once authenticated, the VPN client software establishes a secure, encrypted tunnel between my computer and the RPS Lab VPN server. This tunnel is used to transmit all data between my computer and the lab environment.
+
+Step 4: Assigning an IP Address
+
+The RPS Lab VPN server assigns an IP address to my computer, which is part of the lab network's IP address range. This allows my computer to communicate with devices on the lab network as if it were physically present in the lab.
+
+Step 5: Accessing Lab Resources
+
+With the VPN connection established, I can now access resources on the RPS Lab network, such as servers, databases, and applications, using their IP addresses or hostnames. I can also use remote desktop software to connect to lab computers and access their desktop environments.
+
+Step 6: Secure Data Transmission
+
+All data transmitted between my computer and the RPS Lab environment is encrypted and secure, ensuring that sensitive information is protected from unauthorized access.
+
+By following these steps, I can access the RPS Lab environment from my home network, allowing me to work on projects, access resources, and collaborate with others as if I were physically present in the lab.

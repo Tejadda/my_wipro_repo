@@ -1,0 +1,12 @@
+feature branches and hotfixes create a hotfix branch to fix an issue in the main code merge the hotfix branch in to main ensuring that the issue is resolved
+
+Solution:
+=========
+==>git checkout -b hotfix-branch main
+# Make changes to fix the issue
+==>git add .
+==>git commit -m "Fixed the issue in the code"
+==>git checkout main
+==>git merge --no-ff hotfix-branch
+==>git push origin main
+==>git branch -d hotfix-branch
