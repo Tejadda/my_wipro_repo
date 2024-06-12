@@ -1,0 +1,144 @@
+/* Apply box model to all elements */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Container styles */
+.container {
+	width: 80%; /* adjust width to your liking */
+	margin: 40px auto; /* add margin to center container */
+	padding: 20px; /* add padding to container */
+	background-color: #f0f0f0; /* add background color */
+	border: 1px solid #ddd; /* add border */
+}
+
+/* Header styles */
+.header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px; /* add padding to header */
+	text-align: center; /* center header text */
+}
+
+/* Navigation styles */
+.nav {
+	background-color: #444;
+	color: #fff;
+	padding: 10px; /* add padding to nav */
+	text-align: center; /* center nav text */
+}
+
+/* Navigation menu styles */
+.nav a {
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+	background-color: #555;
+}
+
+/* Add animation to menu elements */
+.animated-link {
+	animation: fadeInLeft 0.5s ease forwards;
+}
+
+.animated-link:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.animated-link:nth-child(2) {
+	animation-delay: 0.1s;
+}
+
+.animated-link:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+.animated-link:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+.animated-link:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+@keyframes fadeInLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Add animation to form elements */
+.animated-input {
+	animation: fadeInUp 0.5s ease forwards;
+}
+
+.animated-button {
+	animation: fadeInUp 0.5s 0.1s ease forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Main content styles */
+.main-content {
+	display: flex; /* use flexbox to create multi-column layout */
+	flex-wrap: wrap; /* allow columns to wrap to next line */
+	padding: 20px; /* add padding to main content */
+}
+
+/* Column styles */
+.column1,.column2,.column3 {
+	flex-basis: 30%; /* set width of each column */
+	margin: 10px; /* add margin to columns */
+	padding: 20px; /* add padding to columns */
+	background-color: #f7f7f7; /* add background color */
+	border: 1px solid #ddd; /* add border */
+}
+
+/* Form styles */
+.form {
+	flex-basis: 100%; /* set form to full width */
+	margin: 10px 0; /* add margin to form */
+	padding: 20px; /* add padding to form */
+	background-color: #f7f7f7; /*add background color */
+	border: 1px solid #ddd; /* add border */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+	.column1,.column2,.column3 {
+		flex-basis: 100%; /* set columns to full width on mobile */
+	}
+	.form {
+		flex-basis: 100%; /* set form to full width on mobile */
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.nav {
+		flex-direction: column; /* stack navigation menu on mobile */
+	}
+	.nav a {
+		padding: 10px 20px; /* add more padding to navigation menu on mobile */
+	}
+}
