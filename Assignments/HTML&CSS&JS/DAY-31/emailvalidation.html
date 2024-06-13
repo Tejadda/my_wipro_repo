@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Email Validation</title>
+  <style>
+   .rq {
+      color: #FF0000;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+  <form id="registrationForm">
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput">
+    <span id="emailFeedback" class="rq"></span>
+  </form>
+
+  <script>
+    const emailInput = document.getElementById('emailInput');
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    emailInput.addEventListener('input', () => {
+      const emailValue = emailInput.value;
+      if (!emailRegex.test(emailValue)) {
+        document.getElementById('emailFeedback').innerHTML = 'Please enter a valid email address.';
+      } else {
+        document.getElementById('emailFeedback').innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>
