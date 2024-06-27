@@ -1,0 +1,10 @@
+<!-- claimForm.html -->
+<form th:action="@{/submitClaim}" th:object="${claim}" method="post">
+    <label th:for="claim.name">Name:</label>
+    <input type="text" th:field="*{name}" />
+    <br />
+    <label th:for="claim.email">Email:</label>
+    <input type="email" th:field="*{email}" />
+    <br />
+    <input type="submit" value="Submit Claim" />
+</form>

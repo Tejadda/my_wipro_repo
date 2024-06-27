@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body style="background-color: #add8e6;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="color:brown">Policy Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Policies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reports</a>
+                </li>
+            </ul>
+        </div>
+    </nav> </br></br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <h5 class="card-header">Policy Categories</h5>
+                    <ul class="list-group list-group-flush" style="color:red">
+                        <li class="list-group-item">Category 1</li>
+                        <li class="list-group-item">Category 2</li>
+                        <li class="list-group-item">Category 3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <h5 class="card-header" style="color:chocolate">Policies</h5>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="policy-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="all-policies-tab" data-toggle="tab" href="#all-policies" role="tab" aria-controls="all-policies" aria-selected="true">All Policies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="active-policies-tab" data-toggle="tab" href="#active-policies" role="tab" aria-controls="active-policies" aria-selected="false">Active Policies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="inactive-policies-tab" data-toggle="tab" href="#inactive-policies" role="tab" aria-controls="inactive-policies" aria-selected="false">Inactive Policies</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="policy-tabs-content">
+                            <div class="tab-pane fade show active" id="all-policies" role="tabpanel" aria-labelledby="all-policies-tab">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr style="color:blueviolet">
+                                            <th>Policy ID</th>
+                                            <th>Policy Name</th>
+                                            <th>Category</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="policy-list">
+                                        <!-- policy list will be rendered here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="active-policies" role="tabpanel" aria-labelledby="active-policies-tab">
+                                <!-- active policies will be rendered here -->
+                            </div>
+                            <div class="tab-pane fade" id="inactive-policies" role="tabpanel" aria-labelledby="inactive-policies-tab">
+                                <!-- inactive policies will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for policy details -->
+    <div class="modal fade" id="policy-modal" tabindex="-1" role="dialog" aria-labelledby="policy-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="policy-modal-label">Policy Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- policy details will be rendered here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
